@@ -7,34 +7,34 @@ on:
     branches: [ main ]
 
 jobs:
-  testinfra:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  # testinfra:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: build and testinfra
-        env:
-          TESTINFRA_IMAGE: "renatomefi/docker-testinfra:2"
-          DOCKER_SOCKET_RO_BIND: "/var/run/docker.sock:/var/run/docker.sock:ro"
-          TEST_IMAGE_NAME: "tf_toolbox"
+  #     - name: build and testinfra
+  #       env:
+  #         TESTINFRA_IMAGE: "renatomefi/docker-testinfra:2"
+  #         DOCKER_SOCKET_RO_BIND: "/var/run/docker.sock:/var/run/docker.sock:ro"
+  #         TEST_IMAGE_NAME: "tf_toolbox"
 
-        run: |
-          docker build . --file Dockerfile --tag ${TEST_IMAGE_NAME}    
-          # docker save and load if between jobs
+  #       run: |
+  #         docker build . --file Dockerfile --tag ${TEST_IMAGE_NAME}    
+  #         # docker save and load if between jobs
           
-          echo "starting container to be tested"
-          export TEST_CONTAINER_ID=$(docker run --rm -it -d --entrypoint /bin/sh --name ${TEST_IMAGE_NAME}_testinfra ${TEST_IMAGE_NAME})
-          echo "test container id: ${TEST_CONTAINER_ID}"
+  #         echo "starting container to be tested"
+  #         export TEST_CONTAINER_ID=$(docker run --rm -it -d --entrypoint /bin/sh --name ${TEST_IMAGE_NAME}_testinfra ${TEST_IMAGE_NAME})
+  #         echo "test container id: ${TEST_CONTAINER_ID}"
 
-          echo "starting TestInfra tests"
-          docker run --rm -t -v "$(pwd)/tests:/tests" \
-            -v ${DOCKER_SOCKET_RO_BIND} \
-            ${TESTINFRA_IMAGE} -v --hosts="docker://${TEST_CONTAINER_ID}"
+  #         echo "starting TestInfra tests"
+  #         docker run --rm -t -v "$(pwd)/tests:/tests" \
+  #           -v ${DOCKER_SOCKET_RO_BIND} \
+  #           ${TESTINFRA_IMAGE} -v --hosts="docker://${TEST_CONTAINER_ID}"
             
-          # dont forget to tag later
+  #         # dont forget to tag later
 
   semverrelease:
-    needs: testinfra
+    #needs: testinfra
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
