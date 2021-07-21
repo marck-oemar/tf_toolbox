@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# [1.4.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.3.0...v1.4.0) (2021-07-21)
+
+
+### Features
+
+* add push in ci ([e15ac97](https://github.com/marck-oemar/tf_toolbox/commit/e15ac97e6bd23e390a00bd1fe12bad494505c9f8))
+* fix10 ([717a19a](https://github.com/marck-oemar/tf_toolbox/commit/717a19ae0f350a68d41dbddf17350413b9c18568))
+
 # [1.3.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.2.0...v1.3.0) (2021-07-21)
 
 
