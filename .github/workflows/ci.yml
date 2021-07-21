@@ -16,7 +16,7 @@ jobs:
         env:
           TESTINFRA_IMAGE: "renatomefi/docker-testinfra:2"
           DOCKER_SOCKET_RO_BIND: "/var/run/docker.sock:/var/run/docker.sock:ro"
-          TEST_IMAGE_NAME: "elmoenco/tf_toolbox"
+          TEST_IMAGE_NAME: "tf_toolbox"
 
         run: |
           docker build . --file Dockerfile     
@@ -28,4 +28,4 @@ jobs:
             -v ${DOCKER_SOCKET_RO_BIND} \
             ${TESTINFRA_IMAGE} -v --hosts="docker://${TEST_CONTAINER_ID}"
             
- 
+          # dont forget to tag later
