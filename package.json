@@ -1,7 +1,7 @@
 {
     "name": "tf-toolbox",
     "version": "0.0.0",
-    "repository": "https://github.com/marck-oemar/tf-toolbox",
+    "repository": "https://github.com/marck-oemar/tf_toolbox",
     "author": "marck.oemar@gmail.com",
     "license": "N/A",
     "devDependencies": {
