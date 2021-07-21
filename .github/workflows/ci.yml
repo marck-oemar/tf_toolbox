@@ -1,0 +1,31 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testinfra:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build and testinfra
+        env:
+          TESTINFRA_IMAGE: "renatomefi/docker-testinfra:2"
+          DOCKER_SOCKET_RO_BIND: "/var/run/docker.sock:/var/run/docker.sock:ro"
+          TEST_IMAGE_NAME: "elmoenco/tf_toolbox"
+
+        run: |
+          docker build . --file Dockerfile     
+          # docker save and load if between jobs
+          
+          export TEST_CONTAINER_ID=$(docker run --rm -it -d --entrypoint /bin/sh --name ${TEST_IMAGE_NAME}_testinfra ${TEST_IMAGE_NAME})
+          
+          docker run --rm -t -v "$(pwd)/containers/${TEST_IMAGE_NAME}/test:/tests" \
+            -v ${DOCKER_SOCKET_RO_BIND} \
+            ${TESTINFRA_IMAGE} -v --hosts="docker://${TEST_CONTAINER_ID}"
+            
+ 
