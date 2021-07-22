@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.8.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.7.0...v1.8.0) (2021-07-22)
+
+
+### Features
+
+* add checkout ([736343f](https://github.com/marck-oemar/tf_toolbox/commit/736343fb6a84998f465a657e70e9ab16ab36d67a))
+
 # [1.7.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.6.0...v1.7.0) (2021-07-22)
 
 
