@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.7.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.6.0...v1.7.0) (2021-07-22)
+
+
+### Features
+
+* split jobs ([8e75478](https://github.com/marck-oemar/tf_toolbox/commit/8e7547845329b01928b371d8c4097854d5ecb13f))
+
 # [1.6.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.5.0...v1.6.0) (2021-07-22)
 
 
