@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.5.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.4.0...v1.5.0) (2021-07-21)
+
+
+### Features
+
+* enable all jobs in pipeline ([a29473f](https://github.com/marck-oemar/tf_toolbox/commit/a29473f6041299faede711ac802f9258d5498796))
+
 # [1.4.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.3.0...v1.4.0) (2021-07-21)
 
 
