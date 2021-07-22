@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.6.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.5.0...v1.6.0) (2021-07-22)
+
+
+### Features
+
+* add date timestamp to release ([eb823c9](https://github.com/marck-oemar/tf_toolbox/commit/eb823c97121d6a9442e51786ab2ad0a0b4aa2e1d))
+
 # [1.5.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.4.0...v1.5.0) (2021-07-21)
 
 
