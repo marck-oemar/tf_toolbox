@@ -3,7 +3,7 @@ name: Out of Band - Docker Image Build and Push
 on:
   workflow_dispatch:
   schedule:
-    - cron: '* * 1 * *'
+    - cron: '12 00 1 * *'
 
 jobs:
   release_artifact:
