@@ -1,4 +1,4 @@
-# CI/CD container image toolbox with terraform and aws cli  
+# CI/CD container image toolbox with terraform and aws cli. # added comment
 FROM hashicorp/terraform:1.0.2
 
 ENV AWS_CLI_VERSION=1.16.263
