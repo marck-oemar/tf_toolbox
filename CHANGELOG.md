@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.11.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.10.0...v1.11.0) (2021-08-24)
+
+
+### Features
+
+* amazing new feature ([c7607e6](https://github.com/marck-oemar/tf_toolbox/commit/c7607e65ea4fc8be16961640a47a4305b2af6722))
+
 # [1.10.0](https://github.com/marck-oemar/tf_toolbox/compare/v1.9.0...v1.10.0) (2021-08-11)
 
 
