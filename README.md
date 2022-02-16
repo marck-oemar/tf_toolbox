@@ -1,10 +1,11 @@
-# My Terraform toolbox container image
+# Terraform toolbox container image
 
-This image is used for running in a CICD pipeline and/or local development. 
+This image can be used for running in a CICD pipeline and/or local development. 
 
-Important tooling:
+Tooling:
 - terraform
 - aws cli
+- kubectl, eksctl, helm, flux and more
 
 ## Smoke testing for the container image
 
@@ -27,9 +28,3 @@ renatomefi/docker-testinfra:2 \
 -v \
 --hosts="docker://< tf_toolbox container id >"
 ```
-
-nee b
-immortant change worthyu of release
-
-
-
